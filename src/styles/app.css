@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f5f5; /* page background in the design (not a token) */
+  color: var(--color-text);
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 var(--space-4);
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-6) var(--space-4) 4rem;
+}
+
+.page {
+  width: 100%;
+  max-width: 960px;
+}
+
+.brand-name {
+  font-weight: bold;
+}
+
+.lead {
+  max-width: 60ch;
+  margin-bottom: var(--space-6);
+}
+
+.section-heading {
+  margin-bottom: var(--space-4);
+}
+
+.card-title {
+  margin: 0;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-2) 0;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+/* posts: one column on a phone, two on desktop */
+.post-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .post-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.link-list {
+  padding-left: var(--space-4);
+}
+
+footer.site-foot {
+  padding: var(--space-4);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
