@@ -63,6 +63,17 @@ export const posts: Post[] = [
     ],
     tags: ['Figma', 'CSS', 'Accessibility'],
   },
+    {
+    id: 6,
+    title: 'Form validation in React, one rule at a time',
+    date: '2026-10-18',
+    excerpt: 'In Week 6 I built a registration form. Writing the rules as a plain function made them easy to test.',
+    body: [
+      'My validateRegistration function takes the form values and returns an object with one error message per bad field. It knows nothing about React, so I could test every rule with a few lines of Vitest, like a password of exactly 8 characters.',
+      'The page shows an error only after the reader leaves a field or presses submit, so nobody sees red text while still typing. Each TextField connects its label and its error message to the input, which helps screen readers.',
+    ],
+    tags: ['React', 'Forms', 'Testing'],
+  },
 ]
 
 // newest first; sorting here means a new object in the array shows up everywhere
