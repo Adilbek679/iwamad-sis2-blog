@@ -1,9 +1,12 @@
 import { Routes, Route } from 'react-router'
 import Layout from './components/Layout'
+import ProtectedRoute from './components/ProtectedRoute'
 import HomePage from './pages/HomePage'
 import PostsPage from './pages/PostsPage'
 import PostPage from './pages/PostPage'
 import ContactPage from './pages/ContactPage'
+import SignInPage from './pages/SignInPage'
+import LikedPage from './pages/LikedPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
@@ -14,6 +17,10 @@ function App() {
         <Route path="posts" element={<PostsPage />} />
         <Route path="posts/:id" element={<PostPage />} />
         <Route path="contact" element={<ContactPage />} />
+        <Route path="signin" element={<SignInPage />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="liked" element={<LikedPage />} />
+        </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
